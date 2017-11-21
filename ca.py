@@ -73,7 +73,7 @@ class automata():
 	def run(self):
 		self.output()
 		print
-		for i in range(100):
+		for i in range(100000):
 			self.step()			
 			self.find_sol()
 			self.stepnum += 1
@@ -84,14 +84,14 @@ class automata():
 			answer = 0
 			for y in range(8):
 				 answer = answer + self.linea[x+y] * math.pow(2, 7-y)	
-				 
+			#print answer 
 			if answer == num1 + num2:
 				print "found it!!!!"
 				print self.stepnum, x
 
 seed = []
 
-num1 = 100
+num1 = 101
 num2 = 109
 	
 a = automata(110, num1, num2)
